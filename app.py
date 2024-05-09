@@ -121,5 +121,5 @@ with tab2:
 
 
 with tab3:
-    st.subheader("Predict")
+    st.subheader("Predict Renewable Energy Share (%)")
     predict()
