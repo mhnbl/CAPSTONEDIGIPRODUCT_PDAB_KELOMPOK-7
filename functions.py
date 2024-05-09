@@ -298,7 +298,7 @@ def predict():
         })
 
         # Make predictions
-        prediction = model.predict(dt)
+        prediction = model.predict(fd)
 
         # Display prediction result
         st.write('Predicted Renewable consumption Share:', prediction[0],'%')
