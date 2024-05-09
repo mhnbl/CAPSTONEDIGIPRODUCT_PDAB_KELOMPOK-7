@@ -62,19 +62,19 @@ with tab1:
         with col1:
             st.write('Fossil Fuels')
             energy_type = 'Fossil Fuels'
-            st.altair_chart(make_donut(selected_year, energy_type, 'red'))
+            st.altair_chart(make_donuts(selected_year, energy_type, 'red'))
         with col2:
             st.write('Nuclear')
             energy_type = 'Nuclear'
-            st.altair_chart(make_donut(selected_year, energy_type, 'blue'))
+            st.altair_chart(make_donuts(selected_year, energy_type, 'blue'))
         with col3:
             st.write('Renewables')
             energy_type = 'Renewables'
-            st.altair_chart(make_donut(selected_year, energy_type, 'green'))
+            st.altair_chart(make_donuts(selected_year, energy_type, 'green'))
         st.markdown("<br>", unsafe_allow_html=True)
 
         with st.expander("See Explanation"):
-            st.write("")
+            st.write('Visualisasi ini akan menampilkan persentase konsumsi energi terbarukan versus energi non-terbarukan secara global setip tahunnya, berdasarkan rata-rata data yang tersedia dalam kolom "Renewable energy share in the total final energy consumption (%)"')
 
         #
         st.subheader("Renewable Energy Share VS Electricity From Fossil Fuels")

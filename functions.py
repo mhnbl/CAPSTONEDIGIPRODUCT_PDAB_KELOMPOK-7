@@ -118,7 +118,7 @@ def renewable_v_fossil():
     with st.expander("See explanation"):
         st.write("")
 
-def make_donut(selected_year, energy_type, input_color):
+def make_donuts(selected_year, energy_type, input_color):
     if input_color == 'blue':
         chart_color = ['#29b5e8', '#155F7A']
     if input_color == 'green':
