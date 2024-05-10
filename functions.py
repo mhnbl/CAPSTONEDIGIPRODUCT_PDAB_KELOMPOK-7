@@ -177,7 +177,7 @@ def top10():
             st.write("Visualisasi menggambarkan sepuluh negara dengan penggunaan listrik terbarukan tertinggi dalam Terawatt-jam (TWh). China memimpin dengan 938.24 TWh, menandakan komitmen kuat terhadap energi terbarukan, sementara Amerika Serikat dan Brasil mengikuti dengan 487.34 TWh dan 405.31 TWh secara berturut-turut. Canada dan India juga menonjol dengan kontribusi signifikan mereka. Keseluruhan, data ini mencerminkan trend global menuju adopsi energi terbarukan yang lebih besar, mendorong diversifikasi sumber energi dan kesadaran akan perubahan iklim.")
 
 def map():
-    def plot_map(df, column, title):
+    def plot_map(df, column):
         fig = px.choropleth(
             df,
             locations='Entity',
@@ -198,7 +198,6 @@ def map():
             oceancolor="LightBlue")
 
         fig.update_layout(
-            title_text=title,
             geo=dict(
                 showframe=False,
                 showcoastlines=False,
@@ -209,7 +208,7 @@ def map():
                 showocean=True,
                 oceancolor="LightBlue"),
             width=680,
-            height=560,
+            height=477,
             dragmode=False,
             uirevision='locked',
             coloraxis_colorbar=dict(
@@ -238,7 +237,7 @@ def map():
 
     df_subset = df[['Entity', 'Year', 'Access to electricity (% of population)']]
 
-    fig = plot_map(df_subset, 'Access to electricity (% of population)', 'Access to Electricity (% of Population) Over Years')
+    fig = plot_map(df_subset, 'Access to electricity (% of population)')
 
     st.plotly_chart(fig)
     with st.expander("See Explanation"):
