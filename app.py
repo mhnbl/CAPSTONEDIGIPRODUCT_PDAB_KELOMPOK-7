@@ -74,8 +74,13 @@ with tab1:
         st.markdown("<br>", unsafe_allow_html=True)
 
         with st.expander("See Explanation"):
-            st.write('Visualisasi ini akan menampilkan persentase konsumsi energi terbarukan versus energi non-terbarukan secara global setip tahunnya, berdasarkan rata-rata data yang tersedia dalam kolom "Renewable energy share in the total final energy consumption (%)"')
-
+            st.write('Dilihat dari diagram lingkaran tersebut, dapat dilihat jika penggunaan energi terbarukan')
+            lst = ['Bahan bakar fosil masih memegang porsi terbesar dalam konsumsi energi, menunjukkan ketergantungan yang masih tinggi terhadap sumber energi tradisional meskipun energi terbarukan semakin berkembang.','Sumber energi terbarukan berkontribusi menunjukkan kehadiran yang signifikan dalam bauran energi, dan mencerminkan momentum yang kuat menuju solusi energi berkelanjutan.','Energi nuklir menempati porsi yang lebih kecil dari konsumsi energi ini menunjukkan peran energi nuklir sebagai sumber energi pelengkap bersama dengan bahan bakar fosil dan energi terbarukan.']
+            s = ''
+            for i in lst:
+                s += "- " + i + "\n"
+            st.markdown(s)
+            st.write('Dengan penekanan pada dominasi bahan bakar fosil. Namun, diagram ini juga menunjukkan kehadiran energi terbarukan yang terus meningkat dan peran pendukung energi nuklir.')
         #
         st.subheader("Renewable Energy Share VS Electricity From Fossil Fuels")
         renewable_v_fossil()

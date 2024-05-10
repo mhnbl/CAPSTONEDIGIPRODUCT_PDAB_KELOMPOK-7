@@ -100,8 +100,8 @@ def region_consumptions():
     st.pyplot(fig)
 
     with st.expander("See explanation"):
-        st.write("")
-        lst = []
+        st.write("Jika dilihat dari grafik diatas :")
+        lst = ['Wilayah Eropa dari tahun ke tahunnya mengalami kenaikan yang cukup signifikan.','Wilayah Amerika Utara mengalami sedikit penurunan ditahun 2007, namun ditahun selanjutnya terbilang cukup stabil karena tidak menurun dan tidak naik secara drastis.','Wilayah Asia mengalami penurunan dari tahun ke tahun. Yang dimana presentase awalnya 22.5% ditahun 2000 sampai ke 17.5% di tahun 2020.','Wilayah Oceania mengalami penurunan yang awalnya 32.5% di tahun 2000 sampai ke 24.5 % ditahun 2020.','Wilayah Amerika Selatan di 2 tahun awal mengalami kenaikan dari 32.5% hingga hampir 35%, lalu ditahun berikutnya mulai mengalami penurunanhingga ke 30% ditahun 2020']
         s = ''
         for i in lst:
             s += "- " + i + "\n"
@@ -116,7 +116,7 @@ def renewable_v_fossil():
     st.pyplot(fig)
 
     with st.expander("See explanation"):
-        st.write("")
+        st.write("Scatter Plot diatas menunjukkan bahwa hubungan antara konsumsi energi terbarukan dan pembangkitan listrik dari bahan bakar fosil itu sedikit kompleks. Sementara beberapa negara mungkin beralih ke energi terbarukan untuk mengurangi ketergantungan mereka pada bahan bakar fosil, negara lain mungkin memiliki campuran sumber energi dalam pembangkitan listrik.")
 
 def make_donuts(selected_year, energy_type, input_color):
     if input_color == 'blue':
