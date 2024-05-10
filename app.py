@@ -81,14 +81,15 @@ with tab1:
                 s += "- " + i + "\n"
             st.markdown(s)
             st.write('Dengan penekanan pada dominasi bahan bakar fosil. Namun, diagram ini juga menunjukkan kehadiran energi terbarukan yang terus meningkat dan peran pendukung energi nuklir.')
-        #
-        st.subheader("Renewable Energy Share VS Electricity From Fossil Fuels")
-        renewable_v_fossil()
-
+        
         #
         st.subheader("Top 10 Countries with Highest Average Renewable Sourced Electricity (TWh)")
         top10()
         
+        #
+        st.subheader("Renewable Energy Share VS Electricity From Fossil Fuels")
+        renewable_v_fossil()
+
         #
         st.subheader("Renewable Energy Percentage Distribution")
         new_con()
