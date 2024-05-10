@@ -264,11 +264,11 @@ def predict():
         access_to_clean_fuels = st.number_input('Access to clean fuels for cooking (% of population)')
         renewable_electricity_capacity_per_capita = st.number_input('Renewable electricity Generating Capacity per capita')
         financial_flows_to_developing_countries = st.number_input('Financial flows to developing countries (US $)')
-        renewable_energy_share = st.number_input('Renewable energy share in the total final energy consumption (%)')
         electricity_from_fossil_fuels = st.number_input('Electricity from fossil fuels (TWh)')
         electricity_from_nuclear = st.number_input('Electricity from nuclear (TWh)')
-    with col2:
         electricity_from_renewables = st.number_input('Electricity from renewables (TWh)')
+    with col2:
+        
         low_carbon_electricity = st.number_input('Low-carbon electricity (% electricity)')
         primary_energy_consumption_per_capita = st.number_input('Primary energy consumption per capita (kWh/person)')
         energy_intensity = st.number_input('Energy intensity level of primary energy (MJ/$2017 PPP GDP)')
@@ -284,7 +284,6 @@ def predict():
             'Access to clean fuels for cooking (% of population)': [access_to_clean_fuels],
             'Renewable electricity Generating Capacity per capita': [renewable_electricity_capacity_per_capita],
             'Financial flows to developing countries (US $)': [financial_flows_to_developing_countries],
-            'Renewable energy share in the total final energy consumption (%)': [renewable_energy_share],
             'Electricity from fossil fuels (TWh)': [electricity_from_fossil_fuels],
             'Electricity from nuclear (TWh)': [electricity_from_nuclear],
             'Electricity from renewables (TWh)': [electricity_from_renewables],
