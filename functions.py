@@ -174,7 +174,7 @@ def top10():
     plt.tight_layout()
     st.pyplot(fig)
     with st.expander("See Explanation"):
-            st.write("")
+            st.write("Visualisasi menggambarkan sepuluh negara dengan penggunaan listrik terbarukan tertinggi dalam Terawatt-jam (TWh). China memimpin dengan 938.24 TWh, menandakan komitmen kuat terhadap energi terbarukan, sementara Amerika Serikat dan Brasil mengikuti dengan 487.34 TWh dan 405.31 TWh secara berturut-turut. Canada dan India juga menonjol dengan kontribusi signifikan mereka. Keseluruhan, data ini mencerminkan trend global menuju adopsi energi terbarukan yang lebih besar, mendorong diversifikasi sumber energi dan kesadaran akan perubahan iklim.")
 
 def map():
     def plot_map(df, column, title):
@@ -249,6 +249,19 @@ def map():
             s += "- " + i + "\n"
         st.markdown(s)
 
+def new_con():
+    fig, ax = plt.subplots()
+    ax.hist(df['Renewable energy share in the total final energy consumption (%)'])
+    ax.set_xlabel('Persentase Konsumsi Energi Terbarukan (%)')
+    ax.set_ylabel('Jumlah Negara')
+    ax.set_title('Distribusi Persentase Konsumsi Energi Terbarukan')
+
+    fig.set_size_inches(10, 6) 
+
+    st.pyplot(fig)
+
+    with st.expander('See Explanation'):
+        st.write('Plot ini menunjukkan distribusi persentase konsumsi energi terbarukan dalam interval tertentu, dengan jumlah negara dalam setiap interval. Data menunjukkan mayoritas negara memiliki persentase rendah dari energi terbarukan, dengan penurunan jumlah negara seiring peningkatan persentase energi terbarukan, kecuali pada interval tertentu di mana jumlah negara kembali meningkat, menunjukkan adanya negara yang sangat bergantung pada energi terbarukan.')
 
 def predict():
 

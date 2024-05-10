@@ -88,6 +88,10 @@ with tab1:
         #
         st.subheader("Top 10 Countries with Highest Average Renewable Sourced Electricity (TWh)")
         top10()
+        
+        #
+        st.subheader("Renewable Energy Percentage Distribution")
+        new_con()
     
     with col[1]:
         #
