@@ -295,10 +295,7 @@ def predict():
             'GDP growth': [gdp_growth],
             'GDP per capita': [gdp_per_capita]
         })
-
-        # Make predictions
         prediction = model.predict(fd)
-
-        # Display prediction result
-        st.write('Predicted Renewable consumption Share:', prediction[0],'%')
-
+        rounded_prediction = round(prediction[0], 2)
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.subheader('Predicted Renewable consumption Share:  {}%'.format(rounded_prediction))
